@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Free Demo Class · OmniBot Labs</title>
+  <meta name="description" content="Experience the OmniBot Labs workshop. Build and test a real kinetic machine or circuit in your first 45 minutes — that's a promise.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect x='24' y='24' width='112' height='30' rx='10' fill='%236946F1'/%3E%3Crect x='24' y='65' width='82' height='30' rx='10' fill='%23E56661'/%3E%3Crect x='24' y='106' width='30' height='30' rx='10' fill='%23D9EF24'/%3E%3Ccircle cx='121' cy='121' r='15' fill='%2371DCCC'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .demo-grid-layout {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr;
+      margin-top: 2rem;
+    }
+    @media(min-width: 1024px) {
+      .demo-grid-layout {
+        grid-template-columns: 0.9fr 1.1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header / Navbar -->
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a class="logo" aria-label="OmniBot Labs Home" href="index.html">
+        <img class="logo-img logo-light" src="assets/logo-light.jpeg" alt="OmniBot Labs" height="34">
+        <img class="logo-img logo-dark" src="assets/logo-dark.png" alt="OmniBot Labs" height="34">
+        <span class="logo-text"><span class="text-lime">labs</span></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="ladder.html">The Ladder</a>
+        <a href="programs.html">Programs</a>
+        <a href="schools.html">Schools &amp; Labs</a>
+        <a href="projects.html">Projects</a>
+        <a href="shop.html">Shop &amp; Kits</a>
+        <a href="impact.html">Social Impact</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="book-demo.html">Book Demo</a>
+
+        <button type="button" class="nav-action-btn" data-open-search aria-label="Search site (Cmd+K)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+
+        <button type="button" class="nav-action-btn" data-open-cart aria-label="View request cart">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count-badge" style="display:none;">0</span>
+        </button>
+
+        <button type="button" aria-label="Toggle dark mode" class="theme-toggle nav-action-btn">🌙</button>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:0.5rem;" class="mobile-nav-actions">
+        <button class="menu-btn" aria-expanded="false" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu">
+    <a href="ladder.html">The Builder's Ladder</a>
+    <a href="programs.html">Programs &amp; Bootcamps</a>
+    <a href="schools.html">Schools &amp; Institutional Labs</a>
+    <a href="projects.html">Project Showcase</a>
+    <a href="shop.html">Shop &amp; Hardware Kits</a>
+    <a href="impact.html">Social Impact &amp; NGO</a>
+    <a href="trainers.html">Trainers &amp; Builders</a>
+    <a href="about.html">About OmniBot Labs</a>
+    <a href="contact.html">Contact Us</a>
+    <a class="nav-cta mt-4" href="book-demo.html">Book a Demo Class</a>
+  </div>
+
+  <main>
+    <div class="container page-top">
+      <a class="back-link" href="index.html">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>
+        </svg>
+        Home
+      </a>
+    </div>
+
+    <section class="py-12" style="padding:2.5rem 0 5rem;">
+      <div class="container demo-grid-layout">
+        
+        <!-- Left Column: Promise & Info -->
+        <div class="blueprint-panel" style="background:var(--ob-void);color:#ffffff;border-color:var(--ob-border);padding:2.5rem;">
+          <span class="mono-tag" style="background:rgba(217,239,36,0.12);color:var(--ob-lime);border-color:rgba(217,239,36,0.3);">THE 45-MINUTE PROMISE</span>
+          <h1 class="text-3xl font-bold mt-3 text-white" style="font-size:2.2rem;line-height:1.2;">Build something real in the first 45 minutes.</h1>
+          <p class="mt-4 text-base" style="color:var(--ob-text-soft);line-height:1.65;">
+            We never subject students or parents to passive slide presentations. During the free demo class, your student will have physical components in hand, building a real functioning motor circuit or sensor system before leaving the workshop.
+          </p>
+
+          <ul class="hl-list mt-8" style="color:var(--ob-text-soft);">
+            <li><strong class="text-white">Zero Prior Experience Needed:</strong> We calibrate to the student's exact grade and comfort level.</li>
+            <li><strong class="text-white">Component-Level Hardware:</strong> Real breadboards, wires, and microcontrollers.</li>
+            <li><strong class="text-white">Individual Mentorship:</strong> 1-on-1 or micro-cohort of at most 3 students per builder.</li>
+            <li><strong class="text-white">No Hidden Obligations:</strong> Completely free orientation session.</li>
+          </ul>
+
+          <div class="mt-8 pt-4 border-t" style="border-color:rgba(255,255,255,0.1);font-size:0.8rem;color:rgba(255,255,255,0.6);">
+            📍 Workshop Location: Hyderabad, Telangana, India<br>
+            ⏱ Demo Timings: Weekday Evenings &amp; Weekend Batches
+          </div>
+        </div>
+
+        <!-- Right Column: Clean Form -->
+        <div class="blueprint-panel" style="padding:2.5rem;background:var(--card-bg);">
+          <span class="mono-tag">CONFIRM YOUR SLOT</span>
+          <h2 class="text-2xl font-bold mt-2">Book Your Free Demo Session</h2>
+          <p class="text-xs text-ink-soft mt-1">We’ll verify slot availability and email/WhatsApp your confirmation details within 24 hours.</p>
+
+          <form id="demo-request-form" class="mt-6" onsubmit="event.preventDefault();">
+            <div class="form-row two-col mb-3">
+              <div>
+                <label class="form-label" for="demo-parent-name">Parent / Guardian Name</label>
+                <input type="text" id="demo-parent-name" class="form-input" placeholder="e.g. Anjali Sharma" required>
+              </div>
+              <div>
+                <label class="form-label" for="demo-student-name">Student Name</label>
+                <input type="text" id="demo-student-name" class="form-input" placeholder="e.g. Vihaan" required>
+              </div>
+            </div>
+
+            <div class="form-row two-col mb-3">
+              <div>
+                <label class="form-label" for="demo-phone">WhatsApp Number</label>
+                <input type="tel" id="demo-phone" class="form-input" placeholder="+91 …" required>
+              </div>
+              <div>
+                <label class="form-label" for="demo-email">Email Address</label>
+                <input type="email" id="demo-email" class="form-input" placeholder="you@domain.com" required>
+              </div>
+            </div>
+
+            <div class="form-row two-col mb-3">
+              <div>
+                <label class="form-label" for="demo-grade">Student's Current Grade</label>
+                <select id="demo-grade" class="form-input">
+                  <option value="Grade 3 (Ages 8–9)">Grade 3 (Ages 8–9)</option>
+                  <option value="Grade 4 (Ages 9–10)">Grade 4 (Ages 9–10)</option>
+                  <option value="Grade 5 (Ages 10–11)">Grade 5 (Ages 10–11)</option>
+                  <option value="Grade 6 (Ages 11–12)">Grade 6 (Ages 11–12)</option>
+                  <option value="Grade 7 (Ages 12–13)">Grade 7 (Ages 12–13)</option>
+                  <option value="Grade 8 (Ages 13–14)">Grade 8 (Ages 13–14)</option>
+                  <option value="Grade 9 (Ages 14–15)">Grade 9 (Ages 14–15)</option>
+                  <option value="Grade 10 (Ages 15–16)">Grade 10 (Ages 15–16)</option>
+                  <option value="Grade 11–12 (Ages 16–18)">Grade 11–12 (Ages 16–18)</option>
+                  <option value="College Undergraduate">College Undergraduate</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label" for="demo-slot">Preferred Weekend Slot</label>
+                <select id="demo-slot" class="form-input">
+                  <option value="Saturday 10:00 AM">Saturday 10:00 AM</option>
+                  <option value="Saturday 02:30 PM">Saturday 02:30 PM</option>
+                  <option value="Sunday 10:00 AM">Sunday 10:00 AM</option>
+                  <option value="Sunday 04:00 PM">Sunday 04:00 PM</option>
+                  <option value="Weekday Evening (Custom)">Weekday Evening (Custom)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group mb-4">
+              <label class="form-label" for="demo-notes">Specific Interest / Prior Projects (Optional)</label>
+              <textarea id="demo-notes" class="form-input" rows="2" placeholder="e.g. Loves taking toy cars apart, interested in robotics and game code…"></textarea>
+            </div>
+
+            <button type="submit" id="demo-submit-btn" class="btn btn-primary btn-block" style="padding:0.85rem;font-size:1rem;">
+              Confirm Demo Session Request →
+            </button>
+          </form>
+
+          <div id="demo-success-card" style="display:none;padding:2rem;background:rgba(85,230,224,0.12);border:1px solid var(--mint);border-radius:var(--r-xl);margin-top:1.5rem;text-align:center;">
+            <div class="toast-icon" style="margin:0 auto 1rem;width:36px;height:36px;font-size:1.1rem;">✓</div>
+            <h3 class="text-xl font-bold text-ink">Demo Slot Request Received!</h3>
+            <p class="text-sm text-ink-soft mt-2 leading-relaxed">
+              We have locked your preference. Our lead builder desk will WhatsApp you the confirmation, directions to the lab, and prep guidelines.
+            </p>
+            <a href="ladder.html" class="btn btn-secondary mt-4">Explore the Builder's Ladder In The Meantime →</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo">
+          <img class="logo-img logo-footer" src="assets/logo-dark.png" alt="OmniBot Labs" height="34">
+          <span class="logo-text text-white"><span class="text-lime">labs</span></span>
+        </div>
+        <p class="mt-3 text-sm" style="color:var(--ob-text-soft);max-width:20rem;">
+          Learn it. Build it. Test it. Show it. Use it to create impact.
+        </p>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <p class="text-sm mt-2 text-ink-soft">Direct Desk: hello@omnibotlabs.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-xs">
+        © 2026 OmniBot Labs. Solderless, authentic educational hardware.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('demo-request-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('demo-request-form').style.display = 'none';
+      document.getElementById('demo-success-card').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

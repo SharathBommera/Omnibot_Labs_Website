@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Program Syllabus &amp; Lab Details · OmniBot Labs</title>
+  <meta name="description" content="Detailed curriculum syllabus, unit modules, hardware kits, and capstone milestones for OmniBot Labs engineering programs.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect x='24' y='24' width='112' height='30' rx='10' fill='%236946F1'/%3E%3Crect x='24' y='65' width='82' height='30' rx='10' fill='%23E56661'/%3E%3Crect x='24' y='106' width='30' height='30' rx='10' fill='%23D9EF24'/%3E%3Ccircle cx='121' cy='121' r='15' fill='%2371DCCC'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .program-layout {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr;
+      margin-top: 2rem;
+    }
+    @media(min-width: 1024px) {
+      .program-layout {
+        grid-template-columns: 1.6fr 1fr;
+      }
+    }
+    .module-item {
+      padding: 1.25rem;
+      border-radius: var(--r-xl);
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header / Navbar -->
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a class="logo" aria-label="OmniBot Labs Home" href="index.html">
+        <img class="logo-img logo-light" src="assets/logo-light.jpeg" alt="OmniBot Labs" height="34">
+        <img class="logo-img logo-dark" src="assets/logo-dark.png" alt="OmniBot Labs" height="34">
+        <span class="logo-text"><span class="text-lime">labs</span></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="ladder.html">The Ladder</a>
+        <a href="programs.html" class="active">Programs</a>
+        <a href="schools.html">Schools &amp; Labs</a>
+        <a href="projects.html">Projects</a>
+        <a href="shop.html">Shop &amp; Kits</a>
+        <a href="impact.html">Social Impact</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="book-demo.html">Book Demo</a>
+
+        <button type="button" class="nav-action-btn" data-open-search aria-label="Search site (Cmd+K)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+
+        <button type="button" class="nav-action-btn" data-open-cart aria-label="View request cart">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count-badge" style="display:none;">0</span>
+        </button>
+
+        <button type="button" aria-label="Toggle dark mode" class="theme-toggle nav-action-btn">🌙</button>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:0.5rem;" class="mobile-nav-actions">
+        <button class="menu-btn" aria-expanded="false" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu">
+    <a href="ladder.html">The Builder's Ladder</a>
+    <a href="programs.html">Programs &amp; Bootcamps</a>
+    <a href="schools.html">Schools &amp; Institutional Labs</a>
+    <a href="projects.html">Project Showcase</a>
+    <a href="shop.html">Shop &amp; Hardware Kits</a>
+    <a href="impact.html">Social Impact &amp; NGO</a>
+    <a href="trainers.html">Trainers &amp; Builders</a>
+    <a href="about.html">About OmniBot Labs</a>
+    <a href="contact.html">Contact Us</a>
+    <a class="nav-cta mt-4" href="book-demo.html">Book a Demo Class</a>
+  </div>
+
+  <main>
+    <div class="container page-top">
+      <a class="back-link" href="programs.html">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>
+        </svg>
+        Back to All Programs
+      </a>
+    </div>
+
+    <section class="py-10" style="padding-bottom:5rem;">
+      <div class="container" id="program-detail-host">
+        <!-- Injected dynamically -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo">
+          <img class="logo-img logo-footer" src="assets/logo-dark.png" alt="OmniBot Labs" height="34">
+          <span class="logo-text text-white"><span class="text-lime">labs</span></span>
+        </div>
+        <p class="mt-3 text-sm" style="color:var(--ob-text-soft);max-width:20rem;">
+          Learn it. Build it. Test it. Show it. Use it to create impact.
+        </p>
+      </div>
+      <div>
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="programs.html">All Programs</a></li>
+          <li><a href="ladder.html">Builder's Ladder</a></li>
+          <li><a href="schools.html">School Innovation Labs</a></li>
+          <li><a href="shop.html">Hardware Kits</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-xs">
+        © 2026 OmniBot Labs. Solderless, authentic educational hardware.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function() {
+      var host = document.getElementById('program-detail-host');
+      if (!host || !window.OmnibotData || !window.OmnibotData.programs) return;
+
+      var params = new URLSearchParams(window.location.search);
+      var id = params.get('id') || 'foundations-robotics-ai';
+
+      var prog = window.OmnibotData.programs.find(function(p) { return p.id === id; });
+      if (!prog) prog = window.OmnibotData.programs[0];
+
+      document.title = prog.title + ' · Syllabus · OmniBot Labs';
+
+      var modulesHtml = '';
+      (prog.modules || []).forEach(function(m, idx) {
+        modulesHtml += [
+          '<div class="module-item spotlight-card">',
+          '  <span class="mono-tag" style="font-size:0.65rem;margin-bottom:0.25rem;">PHASE ' + (idx + 1) + '</span>',
+          '  <h3 class="text-base font-bold mt-1">' + m.title + '</h3>',
+          '  <p class="text-sm text-ink-soft mt-1 leading-relaxed">' + m.summary + '</p>',
+          '</div>'
+        ].join('\n');
+      });
+
+      var outcomesHtml = '';
+      (prog.outcomes || []).forEach(function(o) {
+        outcomesHtml += '<li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;margin-bottom:0.5rem;color:var(--ink-soft);"><span style="color:var(--mint);font-weight:bold;">✓</span><span>' + o + '</span></li>';
+      });
+
+      var techHtml = (prog.technologies || []).map(function(t) {
+        return '<span class="mono-tag" style="margin-right:0.35rem;margin-bottom:0.35rem;">' + t + '</span>';
+      }).join('');
+
+      var hardwareHtml = (prog.hardware || []).map(function(h) {
+        return '<span class="mono-tag amber" style="margin-right:0.35rem;margin-bottom:0.35rem;">' + h + '</span>';
+      }).join('');
+
+      host.innerHTML = [
+        '<div class="reveal">',
+        '  <div class="flex items-center gap-2 mb-3">',
+        '    <span class="mono-tag amber">' + prog.band + '</span>',
+        '    <span class="mono-tag">' + prog.difficulty + '</span>',
+        '    <span class="mono-tag coral">' + prog.format + '</span>',
+        '  </div>',
+        '  <h1 class="text-3xl font-bold" style="font-size:2.4rem;">' + prog.title + '</h1>',
+        '  <p class="text-xl text-mint mt-2 font-mono" style="font-size:1.15rem;">' + prog.heroTagline + '</p>',
+        '  <p class="text-ink-soft text-lg mt-4 max-w-3xl leading-relaxed">' + prog.description + '</p>',
+        '</div>',
+        '',
+        '<div class="program-layout mt-10">',
+        '  <!-- Left: Modules & Capstone -->',
+        '  <div>',
+        '    <div class="blueprint-panel mb-8" style="padding:1.75rem;">',
+        '      <span class="mono-tag">CURRICULUM BREAKDOWN &amp; MODULES</span>',
+        '      <div class="mt-4">' + modulesHtml + '</div>',
+        '    </div>',
+        '',
+        '    <div class="blueprint-panel" style="padding:1.75rem;">',
+        '      <span class="mono-tag coral">VERIFIABLE LEARNING OUTCOMES</span>',
+        '      <ul class="mt-4" style="list-style:none;padding:0;">' + outcomesHtml + '</ul>',
+        '    </div>',
+        '  </div>',
+        '',
+        '  <!-- Right: Info Card & CTA -->',
+        '  <div>',
+        '    <div class="blueprint-panel" style="background:var(--paper-alt);padding:1.75rem;">',
+        '      <span class="mono-tag violet">PROGRAM DETAILS</span>',
+        '      <div class="mt-4 space-y-3" style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.875rem;">',
+        '        <div><strong class="block text-ink">Target Audience:</strong> <span class="text-ink-soft">' + prog.audience + '</span></div>',
+        '        <div><strong class="block text-ink">Duration:</strong> <span class="text-ink-soft">' + prog.duration + '</span></div>',
+        '        <div><strong class="block text-ink">Delivery Mode:</strong> <span class="text-ink-soft">' + prog.format + '</span></div>',
+        '        <div><strong class="block text-ink">Public Capstone:</strong> <span class="text-mint font-bold">' + prog.capstone + '</span></div>',
+        '      </div>',
+        '',
+        '      <div class="mt-6 pt-4 border-t" style="border-color:var(--card-border);">',
+        '        <span class="text-xs font-mono text-ink-muted block mb-2">SOFTWARE &amp; TOOLS:</span>',
+        '        <div class="flex flex-wrap">' + techHtml + '</div>',
+        '      </div>',
+        '',
+        '      <div class="mt-4 pt-3 border-t" style="border-color:var(--card-border);">',
+        '        <span class="text-xs font-mono text-ink-muted block mb-2">HARDWARE KITS USED:</span>',
+        '        <div class="flex flex-wrap">' + hardwareHtml + '</div>',
+        '      </div>',
+        '',
+        '      <div class="mt-6 pt-4 border-t" style="border-color:var(--card-border);">',
+        '        <a href="book-demo.html" class="btn btn-primary btn-block mb-3">Book Demo Class for This Program →</a>',
+        '        <a href="schools.html" class="btn btn-secondary btn-block">Enquire for Institutional Delivery</a>',
+        '      </div>',
+        '    </div>',
+        '  </div>',
+        '</div>'
+      ].join('\n');
+    })();
+  </script>
+</body>
+</html>

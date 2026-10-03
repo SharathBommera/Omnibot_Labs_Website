@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OmniBot Labs — Don't Just Learn Technology. Build With It.</title>
+  <meta name="description" content="OmniBot Labs operates at the intersection of AI, Robotics, Coding, Electronics, and Social Impact. Discover the 10-year Builder's Ladder, hardware kits, and school lab programs.">
+  <meta property="og:title" content="OmniBot Labs — Where Builders Grow">
+  <meta property="og:description" content="Learn it. Build it. Test it. Show it. Use it to create impact. Robotics, AI kits, workshops & institutional labs.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect x='24' y='24' width='112' height='30' rx='10' fill='%236946F1'/%3E%3Crect x='24' y='65' width='82' height='30' rx='10' fill='%23E56661'/%3E%3Crect x='24' y='106' width='30' height='30' rx='10' fill='%23D9EF24'/%3E%3Ccircle cx='121' cy='121' r='15' fill='%2371DCCC'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header / Navbar -->
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a class="logo" aria-label="OmniBot Labs Home" href="index.html">
+        <img class="logo-img logo-light" src="assets/logo-light.jpeg" alt="OmniBot Labs" height="34">
+        <img class="logo-img logo-dark" src="assets/logo-dark.png" alt="OmniBot Labs" height="34">
+        <span class="logo-text"><span class="text-lime">labs</span></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="ladder.html">The Ladder</a>
+        <a href="programs.html">Programs</a>
+        <a href="schools.html">Schools &amp; Labs</a>
+        <a href="projects.html">Projects</a>
+        <a href="shop.html">Shop &amp; Kits</a>
+        <a href="impact.html">Social Impact</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="book-demo.html">Book Demo</a>
+
+        <!-- Global Search Button -->
+        <button type="button" class="nav-action-btn" data-open-search aria-label="Search site (Cmd+K)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+
+        <!-- Cart Action Button with Badge -->
+        <button type="button" class="nav-action-btn" data-open-cart aria-label="View request cart">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count-badge" style="display:none;">0</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button type="button" aria-label="Toggle dark mode" class="theme-toggle nav-action-btn">🌙</button>
+      </div>
+
+      <!-- Mobile Actions & Hamburger -->
+      <div style="display:flex;align-items:center;gap:0.5rem;" class="mobile-nav-actions">
+        <button type="button" class="nav-action-btn" data-open-cart aria-label="View request cart" style="display:inline-flex;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/>
+          </svg>
+          <span class="cart-count-badge" style="display:none;">0</span>
+        </button>
+        <button class="menu-btn" aria-expanded="false" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu">
+    <div style="display:flex;gap:0.75rem;margin-bottom:1rem;">
+      <button type="button" class="btn btn-secondary" style="flex:1;font-size:0.8rem;padding:0.5rem;" data-open-search>🔍 Search Site</button>
+      <button type="button" class="btn btn-secondary" style="flex:1;font-size:0.8rem;padding:0.5rem;" data-open-cart>🛒 Cart</button>
+    </div>
+    <a href="ladder.html">The Builder's Ladder (Grades 3–12)</a>
+    <a href="programs.html">All Programs &amp; Bootcamps</a>
+    <a href="schools.html">Schools &amp; Institutional Labs</a>
+    <a href="projects.html">Project Showcase</a>
+    <a href="shop.html">Shop &amp; Hardware Kits</a>
+    <a href="impact.html">Social Impact &amp; NGO</a>
+    <a href="trainers.html">Trainers &amp; Builders</a>
+    <a href="about.html">About OmniBot Labs</a>
+    <a href="contact.html">Contact Us</a>
+    <a class="nav-cta mt-4" href="book-demo.html">Book a Demo Class</a>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding-top:1.5rem;border-top:1px solid var(--card-border);margin-top:1rem;">
+      <span class="font-medium text-ink-soft">Dark / Light Mode</span>
+      <button type="button" class="theme-toggle">🌙</button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero bg-studs hero-gradient-host" style="position:relative;overflow:hidden;padding:6.5rem 0 5rem;">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="mono-tag">ENGINEERING LAB &amp; ECOSYSTEM</span>
+            <span class="mono-tag coral">HYDERABAD, INDIA</span>
+          </div>
+
+          <h1 class="mt-2" style="max-width:38rem;">
+            Don't just learn technology. <span class="text-lime">Build with it.</span>
+          </h1>
+
+          <p class="mt-6 text-lg text-ink-soft max-w-2xl leading-relaxed">
+            Where curiosity becomes tangible reality. OmniBot Labs trains the next generation of engineers through 
+            real microcontrollers, computer vision, autonomous rovers, and public capstone builds — coupled with 
+            grassroots social impact that expands hardware education across India.
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a class="btn btn-primary" href="ladder.html">
+              Climb the Ladder (G3–12)
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+              </svg>
+            </a>
+            <a class="btn btn-secondary" href="shop.html">
+              Explore Hardware Kits
+            </a>
+            <a class="btn btn-secondary" href="schools.html" style="border-style:dashed;">
+              For Schools &amp; Institutions
+            </a>
+          </div>
+
+          <!-- Hero Metrics & Truths -->
+          <dl class="hero-stats mt-10">
+            <div>
+              <dd class="stat-value">10</dd>
+              <dd class="stat-label">Years, One Continuous Ladder</dd>
+            </div>
+            <div>
+              <dd class="stat-value">100%</dd>
+              <dd class="stat-label">Physical Hardware &amp; Breadboards</dd>
+            </div>
+            <div>
+              <dd class="stat-value">10</dd>
+              <dd class="stat-label">Annual Public Capstones</dd>
+            </div>
+            <div>
+              <dd class="stat-value">Dual</dd>
+              <dd class="stat-label">Commercial + NGO Impact</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Hero Laboratory Visual Artifact -->
+        <div class="hero-mascot reveal">
+          <div class="blueprint-panel" style="box-shadow:var(--block-shadow);padding:1.75rem;">
+            <div class="flex items-center justify-between mb-4 pb-3" style="border-bottom:1px solid var(--card-border);">
+              <span class="mono-tag">HARDWARE SPEC // ACTIVE</span>
+              <span class="mono-tag amber">BENCH STATUS: CALIBRATED</span>
+            </div>
+
+            <!-- Workbench Blueprint Graphic -->
+            <div style="background:rgba(0,0,0,0.04);border-radius:var(--r-xl);padding:1.5rem;text-align:center;position:relative;">
+              <svg viewBox="0 0 240 220" width="230" height="210" class="animate-float" style="margin:0 auto;" role="img" aria-label="OmniBot Labs Engineering Robot Platform">
+                <!-- Circuit Trace Background Lines -->
+                <path d="M20 180 H 70 V 130 H 120 V 50 H 190" stroke="rgba(113,220,204,0.3)" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+                <circle cx="190" cy="50" r="4" fill="#71DCCC"/>
+                <circle cx="20" cy="180" r="4" fill="#71DCCC"/>
+
+                <!-- Robot Body -->
+                <rect x="56" y="46" width="128" height="92" rx="24" fill="#1A1830" stroke="#6946F1" stroke-width="3"></rect>
+                <rect x="72" y="66" width="96" height="52" rx="16" fill="#0D0C1D"></rect>
+                <circle cx="102" cy="90" r="12" fill="#55E6E0"></circle>
+                <circle cx="138" cy="90" r="12" fill="#55E6E0"></circle>
+                <circle cx="105" cy="87" r="4" fill="#ffffff"></circle>
+                <circle cx="141" cy="87" r="4" fill="#ffffff"></circle>
+                <path d="M104 124 q16 8 32 0" stroke="#D9EF24" stroke-width="4" fill="none" stroke-linecap="round"></path>
+                
+                <!-- Actuator layers -->
+                <rect x="76" y="146" width="88" height="22" rx="8" fill="#FFB703"></rect>
+                <rect x="70" y="172" width="100" height="22" rx="8" fill="#FF7A45"></rect>
+                <rect x="64" y="198" width="112" height="22" rx="8" fill="#6946F1"></rect>
+
+                <!-- Status LED -->
+                <circle cx="120" cy="22" r="8" fill="#FF7A45"></circle>
+                <line x1="120" y1="30" x2="120" y2="46" stroke="#6946F1" stroke-width="4"></line>
+              </svg>
+            </div>
+
+            <div class="mt-4 pt-3 flex items-center justify-between" style="border-top:1px solid var(--card-border);font-family:var(--font-mono);font-size:0.75rem;">
+              <span class="text-ink-soft">SERIAL: OB-ROV-904</span>
+              <span class="text-mint font-bold">CORE: ROS2 / ESP32</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CENTRAL PILLARS: LEARN · BUILD · TEST · SHOWCASE · IMPACT -->
+    <section class="py-20" style="padding:4rem 0;background:var(--paper-alt);border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);">
+      <div class="container">
+        <div class="reveal">
+          <span class="mono-tag">PEDAGOGICAL ARCHITECTURE</span>
+          <h2 class="mt-3">The Builder's Cycle</h2>
+          <p class="mt-3 max-w-2xl text-ink-soft">
+            Technology is never mastered by passive watching. Every OmniBot experience moves through five irreversible stages:
+          </p>
+        </div>
+
+        <div class="story-step-grid mt-10">
+          <div class="story-step-card spotlight-card">
+            <span class="step-label">PHASE 01 // CURIOSITY</span>
+            <h3 class="mt-2 text-xl font-bold">1. Learn the Physics</h3>
+            <p class="mt-2 text-sm text-ink-soft">
+              Experience the physical principles before naming them. Strip wires, measure voltages, and feel motor torque with hands and bodies before encountering the equations.
+            </p>
+          </div>
+
+          <div class="story-step-card spotlight-card">
+            <span class="step-label">PHASE 02 // CREATION</span>
+            <h3 class="mt-2 text-xl font-bold">2. Build the Machine</h3>
+            <p class="mt-2 text-sm text-ink-soft">
+              Assemble the physical chassis. Solder or wire sensors on breadboards. Connect microcontrollers, write clean C++ or Python, and debug the physical circuit.
+            </p>
+          </div>
+
+          <div class="story-step-card spotlight-card">
+            <span class="step-label">PHASE 03 // RIGOR</span>
+            <h3 class="mt-2 text-xl font-bold">3. Test in the Field</h3>
+            <p class="mt-2 text-sm text-ink-soft">
+              Run the robot across unpredictable terrain. Calibrate PID loops, measure sensor noise, handle edge cases, and eliminate failure points.
+            </p>
+          </div>
+
+          <div class="story-step-card spotlight-card">
+            <span class="step-label">PHASE 04 // AUDIENCE</span>
+            <h3 class="mt-2 text-xl font-bold">4. Showcase in Public</h3>
+            <p class="mt-2 text-sm text-ink-soft">
+              Nothing stays hidden in a folder. Every year culminates in a public capstone demonstration before family, peers, and industry reviewers.
+            </p>
+          </div>
+
+          <div class="story-step-card spotlight-card">
+            <span class="step-label">PHASE 05 // MISSION</span>
+            <h3 class="mt-2 text-xl font-bold">5. Create Real Impact</h3>
+            <p class="mt-2 text-sm text-ink-soft">
+              Apply engineering to solve real human problems: water quality monitoring, assistive Braille tutors, and bringing labs to rural classrooms.
+            </p>
+          </div>
+
+          <div class="story-step-card spotlight-card" style="background:var(--ob-void);color:#ffffff;border-color:var(--ob-border);">
+            <span class="step-label" style="color:var(--ob-lime);">START BUILDING</span>
+            <h3 class="mt-2 text-xl font-bold text-white">Ready to start?</h3>
+            <p class="mt-2 text-sm text-paper" style="opacity:0.8;">
+              Book a zero-risk 45-minute demo class where your child builds their first functioning circuit on day one.
+            </p>
+            <a href="book-demo.html" class="btn btn-amber mt-4" style="font-size:0.85rem;padding:0.4rem 1rem;">Book Demo Now →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SIGNATURE MOMENT 1: THE BUILDER'S LADDER (GRADES 3–12) -->
+    <section class="py-20" style="padding:5rem 0;">
+      <div class="container">
+        <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+          <div>
+            <span class="mono-tag">CURRICULUM SPINE</span>
+            <h2 class="mt-2">The Builder's Ladder</h2>
+            <p class="mt-3 text-ink-soft max-w-2xl">
+              A ten-year project-based progression where students climb one rung a year. 
+              At most one major new tool per semester — eliminating knowledge cliffs.
+            </p>
+          </div>
+          <a href="ladder.html" class="btn btn-secondary">
+            View All 10 Grades in Detail →
+          </a>
+        </div>
+
+        <!-- 4 Bands Grid -->
+        <div class="story-step-grid">
+          <!-- Band 1 -->
+          <div class="blueprint-panel spotlight-card">
+            <div class="flex items-center justify-between mb-3">
+              <span class="mono-tag amber">GRADES 3–5</span>
+              <span class="text-xs font-mono text-ink-muted">Ages 8–11</span>
+            </div>
+            <h3 class="text-xl font-bold">Foundations</h3>
+            <p class="mt-2 text-sm text-ink-soft">
+              From cardboard cams and copper tape circuits to micro:bit buttons and physical movement. 
+              Students build kinetic automata and closed-loop terrariums.
+            </p>
+            <div class="mt-4 pt-3 border-t text-xs font-mono text-ink-soft" style="border-color:var(--card-border);">
+              <span>TOOLS: Cardboard · micro:bit · DC Motors · Ultrasonic</span>
+            </div>
+          </div>
+
+          <!-- Band 2 -->
+          <div class="blueprint-panel spotlight-card">
+            <div class="flex items-center justify-between mb-3">
+              <span class="mono-tag violet">GRADES 6–7</span>
+              <span class="text-xs font-mono text-ink-muted">Ages 11–13</span>
+            </div>
+            <h3 class="text-xl font-bold">The Bridge</h3>
+            <p class="mt-2 text-sm text-ink-soft">
+              Graduating from block coding to real Python text syntax, I2C digital buses, ESP32 microcontrollers, 
+              and cloud telemetry dashboards.
+            </p>
+            <div class="mt-4 pt-3 border-t text-xs font-mono text-ink-soft" style="border-color:var(--card-border);">
+              <span>TOOLS: Python · ESP32 · OLED Displays · MQTT</span>
+            </div>
+          </div>
+
+          <!-- Band 3 -->
+          <div class="blueprint-panel spotlight-card">
+            <div class="flex items-center justify-between mb-3">
+              <span class="mono-tag coral">GRADES 8–9</span>
+              <span class="text-xs font-mono text-ink-muted">Ages 13–15</span>
+            </div>
+            <h3 class="text-xl font-bold">Engineering</h3>
+            <p class="mt-2 text-sm text-ink-soft">
+              Closed-loop PID motor control, optical wheel encoders, differential-drive chassis, 
+              and deploying edge neural networks on microcontrollers.
+            </p>
+            <div class="mt-4 pt-3 border-t text-xs font-mono text-ink-soft" style="border-color:var(--card-border);">
+              <span>TOOLS: Embedded C++ · PID Math · Encoders · Edge ML</span>
+            </div>
+          </div>
+
+          <!-- Band 4 -->
+          <div class="blueprint-panel spotlight-card">
+            <div class="flex items-center justify-between mb-3">
+              <span class="mono-tag">GRADES 10–12</span>
+              <span class="text-xs font-mono text-ink-muted">Ages 15–18</span>
+            </div>
+            <h3 class="text-xl font-bold">Frontier</h3>
+            <p class="mt-2 text-sm text-ink-soft">
+              Autonomous mobile robots with LiDAR SLAM, ROS 2 nodes, 4-DoF inverse kinematics, 
+              and a six-month defended senior research thesis.
+            </p>
+            <div class="mt-4 pt-3 border-t text-xs font-mono text-ink-soft" style="border-color:var(--card-border);">
+              <span>TOOLS: ROS 2 · LiDAR · Linux · Thesis Defense</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SIGNATURE MOMENT 2: PHYSICAL ARTIFACT PROJECT SHOWCASE -->
+    <section class="py-20" style="padding:5rem 0;background:var(--paper-alt);border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);">
+      <div class="container">
+        <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+          <div>
+            <span class="mono-tag coral">REAL WORKBENCH ARTIFACTS</span>
+            <h2 class="mt-2">What Our Builders Actually Ship</h2>
+            <p class="mt-3 text-ink-soft max-w-2xl">
+              Explore documented student projects. Each tells an honest engineering story: 
+              Problem → Idea → Build → Test → Result → Learning.
+            </p>
+          </div>
+          <a href="projects.html" class="btn btn-secondary">
+            Explore All Projects Gallery →
+          </a>
+        </div>
+
+        <div class="product-grid" id="homepage-featured-projects">
+          <!-- Dynamic 3 projects injected via JS or fallback -->
+          <article class="product-card">
+            <div class="product-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" alt="Autonomous River Quality Probe">
+              <span class="badge bg-mint text-ink product-badge-overlay font-mono">CIVIC IOT</span>
+            </div>
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="product-cat">Grade 12 Senior Thesis</span>
+                <span class="product-level">Hyderabad</span>
+              </div>
+              <h3 class="product-title">Solar-Powered Autonomous River Quality Probe</h3>
+              <p class="product-desc">
+                Floating catamaran buoy measuring turbidity, dissolved oxygen, and pH in the Musi River, uploading live telemetry over cellular NB-IoT.
+              </p>
+              <div class="product-card-actions">
+                <a href="projects.html#solar-river-probe" class="btn btn-secondary btn-block">Read Project Story →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=800&q=80" alt="Autonomous SLAM Rover">
+              <span class="badge bg-violet text-white product-badge-overlay font-mono">ROBOTICS</span>
+            </div>
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="product-cat">Grade 10 Build</span>
+                <span class="product-level">ROS 2 / LiDAR</span>
+              </div>
+              <h3 class="product-title">Autonomous SLAM Warehouse Navigation Rover</h3>
+              <p class="product-desc">
+                A 4WD aluminum chassis that creates 2D laser occupancy maps of cluttered corridors and navigates obstacle courses without human pilot.
+              </p>
+              <div class="product-card-actions">
+                <a href="projects.html#autonomous-slam-rover" class="btn btn-secondary btn-block">Read Project Story →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=800&q=80" alt="AI Plant Sorter">
+              <span class="badge bg-coral text-white product-badge-overlay font-mono">EDGE ML</span>
+            </div>
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="product-cat">Grade 9 Capstone</span>
+                <span class="product-level">TinyML / Vision</span>
+              </div>
+              <h3 class="product-title">Edge Vision Plant Disease Classifier &amp; Sorter</h3>
+              <p class="product-desc">
+                Quantized neural network model running directly on an ESP32-CAM chip, detecting early blight infection on seedling leaves in 240ms.
+              </p>
+              <div class="product-card-actions">
+                <a href="projects.html#ai-vision-plant-sorter" class="btn btn-secondary btn-block">Read Project Story →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. HARDWARE KITS SHOP PREVIEW (REQUEST-BASED COMMERCE) -->
+    <section class="py-20" style="padding:5rem 0;">
+      <div class="container">
+        <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+          <div>
+            <span class="mono-tag amber">HARDWARE SHOP &amp; KITS</span>
+            <h2 class="mt-2">Engineered Robotics &amp; AI Kits</h2>
+            <p class="mt-3 text-ink-soft max-w-2xl">
+              Authentic hardware kits built for hands-on mastery. Zero unnecessary online payment friction — add kits to cart and 
+              request verified pricing and courier dispatch directly via WhatsApp.
+            </p>
+          </div>
+          <a href="shop.html" class="btn btn-secondary">
+            Browse Full Catalog (8 Kits) →
+          </a>
+        </div>
+
+        <div class="product-grid" id="homepage-featured-kits">
+          <!-- Featured Kit 1 -->
+          <article class="product-card">
+            <div class="product-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Arduino Robotics Kit">
+              <span class="badge bg-amber text-ink product-badge-overlay font-mono">BEST SELLER</span>
+            </div>
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="product-cat">Beginner Robotics</span>
+                <span class="product-level">Grades 4–7</span>
+              </div>
+              <h3 class="product-title">OmniBot Arduino Robotics Starter Kit</h3>
+              <p class="product-desc">
+                Complete modular robotics chassis with microcontroller, ultrasonic radar, dual gearmotors, and custom solderless shield.
+              </p>
+              <div class="product-price-row">
+                <span class="product-price-val">₹2,499</span>
+                <span class="product-price-note">All Hardware Included</span>
+              </div>
+              <div class="product-card-actions">
+                <button type="button" class="btn btn-primary" style="flex:1;" data-add-to-cart="arduino-robotics-starter">
+                  + Add to Request
+                </button>
+                <a href="shop-detail.html?id=arduino-robotics-starter" class="btn btn-secondary">
+                  Details
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Featured Kit 2 -->
+          <article class="product-card">
+            <div class="product-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="ESP32 IoT Kit">
+              <span class="badge bg-mint text-ink product-badge-overlay font-mono">CONNECTED HARDWARE</span>
+            </div>
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="product-cat">ESP32 / IoT Kits</span>
+                <span class="product-level">Grades 6–9</span>
+              </div>
+              <h3 class="product-title">ESP32 IoT &amp; Sensor Engineering Kit</h3>
+              <p class="product-desc">
+                Dual-core 240MHz Wi-Fi and Bluetooth development kit with OLED screen, environment sensors, and opto-isolated relay.
+              </p>
+              <div class="product-price-row">
+                <span class="product-price-val">₹2,999</span>
+                <span class="product-price-note">Cloud Telemetry Ready</span>
+              </div>
+              <div class="product-card-actions">
+                <button type="button" class="btn btn-primary" style="flex:1;" data-add-to-cart="esp32-iot-smart-lab">
+                  + Add to Request
+                </button>
+                <a href="shop-detail.html?id=esp32-iot-smart-lab" class="btn btn-secondary">
+                  Details
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Featured Kit 3 -->
+          <article class="product-card">
+            <div class="product-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=800&q=80" alt="AI Vision Kit">
+              <span class="badge bg-violet text-white product-badge-overlay font-mono">EDGE INTELLIGENCE</span>
+            </div>
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="product-cat">AI / ML Kits</span>
+                <span class="product-level">Grades 8–12</span>
+              </div>
+              <h3 class="product-title">OmniBot AI Vision &amp; Edge ML Kit</h3>
+              <p class="product-desc">
+                Edge computing camera module with 2-axis servo tracking gimbal, running on-device convolutional networks for object tracking.
+              </p>
+              <div class="product-price-row">
+                <span class="product-price-val">₹3,799</span>
+                <span class="product-price-note">Includes Edge Models</span>
+              </div>
+              <div class="product-card-actions">
+                <button type="button" class="btn btn-primary" style="flex:1;" data-add-to-cart="ai-vision-edge-kit">
+                  + Add to Request
+                </button>
+                <a href="shop-detail.html?id=ai-vision-edge-kit" class="btn btn-secondary">
+                  Details
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SIGNATURE MOMENT 3: THE DUAL ECOSYSTEM (COMMERCIAL + NGO DUALITY) -->
+    <section class="py-20" style="padding:5rem 0;background:var(--ob-void);color:#ffffff;border-top:1px solid var(--ob-border);">
+      <div class="container">
+        <div class="reveal text-center max-w-3xl mx-auto" style="margin:0 auto 3.5rem;">
+          <span class="mono-tag" style="background:rgba(217,239,36,0.12);color:var(--ob-lime);border-color:rgba(217,239,36,0.3);">THE DUAL ECOSYSTEM</span>
+          <h2 class="mt-3 text-white">Two Connected Sides of One Mission</h2>
+          <p class="mt-3 text-lg" style="color:var(--ob-text-soft);">
+            OmniBot Labs is neither a purely transactional coaching business nor an unsupported charity. 
+            Our commercial engineering innovations directly fuel our grassroots social impact initiatives.
+          </p>
+        </div>
+
+        <div class="story-step-grid" style="grid-template-columns:1fr;gap:2rem;">
+          <div style="display:grid;gap:2rem;grid-template-columns:1fr;" class="two-col-grid">
+            <!-- Commercial Side -->
+            <div class="blueprint-panel" style="background:var(--ob-surface);border-color:var(--ob-border);color:#ffffff;">
+              <span class="mono-tag violet">COMMERCIAL &amp; INSTITUTIONAL</span>
+              <h3 class="mt-3 text-2xl font-bold text-white">Rigor, Engineering &amp; Industry Labs</h3>
+              <p class="mt-3 text-sm leading-relaxed" style="color:var(--ob-text-soft);">
+                We build premium robotics platforms, partner with elite schools to design accredited AI labs, 
+                conduct collegiate engineering bootcamps, and supply robust hardware kits across India.
+              </p>
+              <ul class="hl-list mt-6" style="color:var(--ob-text-soft);">
+                <li><strong class="text-white">Institutional Labs:</strong> Turnkey maker lab architecture &amp; faculty enablement.</li>
+                <li><strong class="text-white">10-Year Syllabi:</strong> Verifiable project portfolios for competitive engineering admissions.</li>
+                <li><strong class="text-white">Hardware Store:</strong> Solderless kits with industrial-grade mechanical components.</li>
+              </ul>
+              <a href="schools.html" class="btn btn-secondary mt-6" style="color:#ffffff;border-color:var(--ob-border);">
+                Explore Institutional Programs →
+              </a>
+            </div>
+
+            <!-- Social Impact Side -->
+            <div class="blueprint-panel" style="background:var(--ob-surface);border-color:var(--ob-border);color:#ffffff;">
+              <span class="mono-tag" style="color:#55E6E0;border-color:rgba(85,230,224,0.3);">SOCIAL IMPACT &amp; OUTREACH</span>
+              <h3 class="mt-3 text-2xl font-bold text-white">Project Udaan &amp; Open Knowledge</h3>
+              <p class="mt-3 text-sm leading-relaxed" style="color:var(--ob-text-soft);">
+                Access to technology education should never be a function of privilege. We bring mobile hardware lockers 
+                to government schools, fund grassroots educator fellowships, and freely open-source robot blueprints.
+              </p>
+              <ul class="hl-list mt-6" style="color:var(--ob-text-soft);">
+                <li><strong class="text-white">Project Udaan:</strong> Mobile hardware labs reaching rural &amp; community schools.</li>
+                <li><strong class="text-white">Builder Fellowship:</strong> Training grassroots educators with full component grants.</li>
+                <li><strong class="text-white">Open Repository:</strong> Free CAD schematics and regional language guides.</li>
+              </ul>
+              <a href="impact.html" class="btn btn-amber mt-6">
+                Partner for Social Impact →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. TRAINERS / BUILDERS SPOTLIGHT -->
+    <section class="py-20" style="padding:5rem 0;">
+      <div class="container">
+        <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+          <div>
+            <span class="mono-tag">BUILDERS · EDUCATORS · TECHNOLOGISTS</span>
+            <h2 class="mt-2">Meet the Builders</h2>
+            <p class="mt-3 text-ink-soft max-w-2xl">
+              Not corporate lecturers. Our team consists of active robotics engineers, embedded programmers, and makers.
+            </p>
+          </div>
+          <a href="trainers.html" class="btn btn-secondary">
+            Meet All Trainers &amp; Profiles →
+          </a>
+        </div>
+
+        <div class="trainer-grid">
+          <div class="trainer-card spotlight-card">
+            <img class="trainer-thumb" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Sharan Kumar">
+            <div class="trainer-content">
+              <h3 class="trainer-name">Sharan Kumar</h3>
+              <p class="trainer-role">Principal Robotics Architect &amp; Co-Founder</p>
+              <div class="trainer-helps">
+                <strong>HELPS YOU BUILD:</strong>
+                Autonomous SLAM rovers, closed-loop PID motion systems, and senior defended capstones.
+              </div>
+            </div>
+          </div>
+
+          <div class="trainer-card spotlight-card">
+            <img class="trainer-thumb" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Priya Nair">
+            <div class="trainer-content">
+              <h3 class="trainer-name">Priya Nair</h3>
+              <p class="trainer-role">Lead Embedded Systems &amp; IoT Mentor</p>
+              <div class="trainer-helps">
+                <strong>HELPS YOU BUILD:</strong>
+                Cloud-connected environmental telemetry nodes and custom retro handheld arcade consoles.
+              </div>
+            </div>
+          </div>
+
+          <div class="trainer-card spotlight-card">
+            <img class="trainer-thumb" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Arjun Reddy">
+            <div class="trainer-content">
+              <h3 class="trainer-name">Arjun Reddy</h3>
+              <p class="trainer-role">Foundations Engineering &amp; Kinematics Lead</p>
+              <div class="trainer-helps">
+                <strong>HELPS YOU BUILD:</strong>
+                Hand-cranked automata, motorized drawing rovers, and 4-DoF mechanical robotic manipulators.
+              </div>
+            </div>
+          </div>
+
+          <div class="trainer-card spotlight-card">
+            <img class="trainer-thumb" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Ananya Deshmukh">
+            <div class="trainer-content">
+              <h3 class="trainer-name">Ananya Deshmukh</h3>
+              <p class="trainer-role">AI &amp; Edge Vision Researcher</p>
+              <div class="trainer-helps">
+                <strong>HELPS YOU BUILD:</strong>
+                On-device vision sorters, facial tracking cameras, and quantized edge neural network models.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. INSTITUTIONAL CALLOUT: FOR SCHOOLS & COLLEGES -->
+    <section class="py-20" style="padding:4rem 0;background:var(--paper-alt);border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);">
+      <div class="container">
+        <div class="blueprint-panel" style="background:var(--card-bg);padding:3rem 2rem;">
+          <div class="flex flex-wrap items-center justify-between gap-6">
+            <div style="max-width:36rem;">
+              <span class="mono-tag coral">FOR PRINCIPALS &amp; ACADEMIC DIRECTORS</span>
+              <h2 class="mt-3">Build an Innovation Lab on Your Campus</h2>
+              <p class="mt-3 text-ink-soft leading-relaxed">
+                Turn your school into an authentic hub of physical computing. We handle space architecture, 
+                student hardware provisioning, curriculum integration, trainer training, and the annual public capstone showcase.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-4">
+                <a href="schools.html" class="btn btn-primary">
+                  Build a Program With Us →
+                </a>
+                <a href="contact.html" class="btn btn-secondary">
+                  Schedule Campus Discussion
+                </a>
+              </div>
+            </div>
+
+            <div style="background:rgba(0,0,0,0.03);padding:1.5rem;border-radius:var(--r-xl);border:1px solid var(--card-border);max-width:22rem;" class="w-full">
+              <span class="mono-tag amber">INSTITUTIONAL CHECKLIST</span>
+              <ul class="hl-list mt-3" style="font-size:0.85rem;">
+                <li>✓ Full NEP 2020 STEM compliance</li>
+                <li>✓ Turnkey 20–100 seat hardware kits</li>
+                <li>✓ Teacher workbooks &amp; rubrics included</li>
+                <li>✓ Feeder into national robotics championships</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FINAL CALL TO ACTION -->
+    <section class="py-20 text-center" style="padding:5rem 0;">
+      <div class="container max-w-3xl">
+        <span class="mono-tag">READY TO START?</span>
+        <h2 class="mt-3 text-3xl font-bold">From Curiosity to Physical Reality</h2>
+        <p class="mt-4 text-lg text-ink-soft">
+          Whether you are a student ready to wire your first motor, a parent seeking serious technical foundations, 
+          or an educator aiming to transform your school — we are ready to build together.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="book-demo.html" class="btn btn-primary">Book a Free Demo Class</a>
+          <a href="shop.html" class="btn btn-secondary">Browse Hardware Kits</a>
+          <a href="contact.html" class="btn btn-secondary">Direct Contact Desk</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo">
+          <img class="logo-img logo-footer" src="assets/logo-dark.png" alt="OmniBot Labs" height="34">
+          <span class="logo-text text-white"><span class="text-lime">labs</span></span>
+        </div>
+        <p class="mt-3 text-sm" style="color:var(--ob-text-soft);max-width:20rem;">
+          Learn it. Build it. Test it. Show it. Use it to create impact. A world-class technology &amp; robotics platform in Hyderabad, India.
+        </p>
+        <div class="mt-4 flex items-center gap-2">
+          <span class="mono-tag" style="background:rgba(217,239,36,0.1);color:var(--ob-lime);border-color:rgba(217,239,36,0.25);">
+            VERIFIED BUILDER DESK
+          </span>
+        </div>
+      </div>
+
+      <nav aria-label="Curriculum & Learning">
+        <h3>Curriculum &amp; Learning</h3>
+        <ul>
+          <li><a href="ladder.html">The Builder's Ladder (G3–12)</a></li>
+          <li><a href="programs.html">All Programs &amp; Sprints</a></li>
+          <li><a href="curriculum.html">Grade-by-Grade Syllabi</a></li>
+          <li><a href="capstones.html">10 Annual Public Capstones</a></li>
+          <li><a href="threads.html">7 Core Skill Threads</a></li>
+          <li><a href="philosophy.html">Pedagogical Philosophy</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Ecosystem & Commerce">
+        <h3>Ecosystem &amp; Products</h3>
+        <ul>
+          <li><a href="shop.html">Hardware Kits &amp; Shop</a></li>
+          <li><a href="cart.html">Request List &amp; Cart</a></li>
+          <li><a href="schools.html">Schools &amp; Institutional Labs</a></li>
+          <li><a href="projects.html">Project Showcase</a></li>
+          <li><a href="impact.html">Project Udaan (Social Impact)</a></li>
+          <li><a href="trainers.html">Trainers &amp; Builders</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h3>Contact &amp; Legal</h3>
+        <ul class="footer-contact">
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/>
+            </svg>
+            hello@omnibotlabs.com
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            Hyderabad, Telangana, India
+          </li>
+          <li class="mt-3"><a href="faq.html">Frequently Asked Questions</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="shipping-returns.html">Shipping &amp; Request Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container flex flex-wrap items-center justify-between gap-4 text-xs">
+        <span>© 2026 OmniBot Labs. All rights reserved. Zero-login open digital platform.</span>
+        <span>Build. Code. Test. Impact.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

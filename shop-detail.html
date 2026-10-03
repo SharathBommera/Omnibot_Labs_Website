@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hardware Kit Specifications · OmniBot Labs</title>
+  <meta name="description" content="Detailed hardware specifications, in-the-box component breakdown, learning outcomes, and possible projects for OmniBot Labs engineering kits.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect x='24' y='24' width='112' height='30' rx='10' fill='%236946F1'/%3E%3Crect x='24' y='65' width='82' height='30' rx='10' fill='%23E56661'/%3E%3Crect x='24' y='106' width='30' height='30' rx='10' fill='%23D9EF24'/%3E%3Ccircle cx='121' cy='121' r='15' fill='%2371DCCC'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .detail-layout {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr;
+      margin-top: 2rem;
+    }
+    @media(min-width: 1024px) {
+      .detail-layout {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .detail-main-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: var(--r-2xl);
+      border: 1px solid var(--card-border);
+      background: #11141a;
+    }
+    .detail-gallery-thumbs {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      overflow-x: auto;
+    }
+    .gallery-thumb-btn {
+      width: 80px;
+      height: 60px;
+      border-radius: var(--r-md);
+      overflow: hidden;
+      border: 2px solid var(--card-border);
+      cursor: pointer;
+      opacity: 0.7;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+    .gallery-thumb-btn.active, .gallery-thumb-btn:hover {
+      opacity: 1;
+      border-color: var(--ob-lime);
+    }
+    .gallery-thumb-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      font-size: 0.875rem;
+    }
+    .spec-table tr {
+      border-bottom: 1px solid var(--card-border);
+    }
+    .spec-table td {
+      padding: 0.75rem 0.5rem;
+    }
+    .spec-label {
+      font-family: var(--font-mono);
+      font-weight: 600;
+      color: var(--ink-soft);
+      width: 40%;
+    }
+    .spec-val {
+      color: var(--ink);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header / Navbar -->
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a class="logo" aria-label="OmniBot Labs Home" href="index.html">
+        <img class="logo-img logo-light" src="assets/logo-light.jpeg" alt="OmniBot Labs" height="34">
+        <img class="logo-img logo-dark" src="assets/logo-dark.png" alt="OmniBot Labs" height="34">
+        <span class="logo-text"><span class="text-lime">labs</span></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="ladder.html">The Ladder</a>
+        <a href="programs.html">Programs</a>
+        <a href="schools.html">Schools &amp; Labs</a>
+        <a href="projects.html">Projects</a>
+        <a href="shop.html" class="active">Shop &amp; Kits</a>
+        <a href="impact.html">Social Impact</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="book-demo.html">Book Demo</a>
+
+        <button type="button" class="nav-action-btn" data-open-search aria-label="Search site (Cmd+K)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+
+        <button type="button" class="nav-action-btn" data-open-cart aria-label="View request cart">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count-badge" style="display:none;">0</span>
+        </button>
+
+        <button type="button" aria-label="Toggle dark mode" class="theme-toggle nav-action-btn">🌙</button>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:0.5rem;" class="mobile-nav-actions">
+        <button type="button" class="nav-action-btn" data-open-cart aria-label="View request cart">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/>
+          </svg>
+          <span class="cart-count-badge" style="display:none;">0</span>
+        </button>
+        <button class="menu-btn" aria-expanded="false" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu">
+    <a href="ladder.html">The Builder's Ladder</a>
+    <a href="programs.html">Programs &amp; Bootcamps</a>
+    <a href="schools.html">Schools &amp; Institutional Labs</a>
+    <a href="projects.html">Project Showcase</a>
+    <a href="shop.html">Shop &amp; Hardware Kits</a>
+    <a href="impact.html">Social Impact &amp; NGO</a>
+    <a href="trainers.html">Trainers &amp; Builders</a>
+    <a href="about.html">About OmniBot Labs</a>
+    <a href="contact.html">Contact Us</a>
+    <a class="nav-cta mt-4" href="book-demo.html">Book a Demo Class</a>
+  </div>
+
+  <main>
+    <div class="container page-top">
+      <a class="back-link" href="shop.html">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>
+        </svg>
+        Back to Hardware Catalog
+      </a>
+    </div>
+
+    <section class="py-10" style="padding-bottom:5rem;">
+      <div class="container" id="product-detail-container">
+        <!-- Injected dynamically by JS -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo">
+          <img class="logo-img logo-footer" src="assets/logo-dark.png" alt="OmniBot Labs" height="34">
+          <span class="logo-text text-white"><span class="text-lime">labs</span></span>
+        </div>
+        <p class="mt-3 text-sm" style="color:var(--ob-text-soft);max-width:20rem;">
+          Learn it. Build it. Test it. Show it. Use it to create impact.
+        </p>
+      </div>
+      <nav aria-label="Links">
+        <h3>Quick Navigation</h3>
+        <ul>
+          <li><a href="shop.html">Shop &amp; Kits</a></li>
+          <li><a href="cart.html">View Cart / Request</a></li>
+          <li><a href="ladder.html">Builder's Ladder</a></li>
+          <li><a href="schools.html">Schools &amp; Labs</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>Direct Support</h3>
+        <ul class="footer-contact">
+          <li>hello@omnibotlabs.com</li>
+          <li>Hyderabad, India</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container flex justify-between text-xs">
+        <span>© 2026 OmniBot Labs. Solderless, authentic educational hardware.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function() {
+      var container = document.getElementById('product-detail-container');
+      if (!container || !window.OmnibotData || !window.OmnibotData.products) return;
+
+      var params = new URLSearchParams(window.location.search);
+      var id = params.get('id') || 'arduino-robotics-starter';
+
+      var product = window.OmnibotData.products.find(function(p) { return p.id === id; });
+      if (!product) product = window.OmnibotData.products[0];
+
+      document.title = product.name + ' · Specifications · OmniBot Labs';
+
+      var specsHtml = '';
+      (product.specs || []).forEach(function(s) {
+        specsHtml += '<tr><td class="spec-label">' + s.label + '</td><td class="spec-val">' + s.value + '</td></tr>';
+      });
+
+      var inBoxHtml = '';
+      (product.inTheBox || []).forEach(function(item) {
+        inBoxHtml += '<li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;margin-bottom:0.5rem;color:var(--ink-soft);"><span style="color:var(--mint);font-weight:bold;">✓</span><span>' + item + '</span></li>';
+      });
+
+      var outcomesHtml = '';
+      (product.learningOutcomes || []).forEach(function(o) {
+        outcomesHtml += '<li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;margin-bottom:0.5rem;color:var(--ink-soft);"><span style="color:var(--ob-lime);font-weight:bold;">▸</span><span>' + o + '</span></li>';
+      });
+
+      var projectsHtml = '';
+      (product.possibleProjects || []).forEach(function(proj) {
+        projectsHtml += '<span class="mono-tag" style="margin-right:0.5rem;margin-bottom:0.5rem;">' + proj + '</span>';
+      });
+
+      var thumbsHtml = '';
+      (product.gallery || [product.image]).forEach(function(imgUrl, idx) {
+        thumbsHtml += '<button type="button" class="gallery-thumb-btn ' + (idx === 0 ? 'active' : '') + '" data-thumb="' + imgUrl + '"><img src="' + imgUrl + '" alt="Thumb ' + idx + '"></button>';
+      });
+
+      container.innerHTML = [
+        '<div class="detail-layout">',
+        '  <!-- Left: Gallery -->',
+        '  <div>',
+        '    <img id="detail-main-img" class="detail-main-img" src="' + product.image + '" alt="' + product.name + '">',
+        '    <div class="detail-gallery-thumbs" id="detail-thumbs">' + thumbsHtml + '</div>',
+        '    <div class="blueprint-panel mt-6" style="padding:1.5rem;">',
+        '      <span class="mono-tag amber">WHAT IS INSIDE THE BOX</span>',
+        '      <ul class="mt-4" style="list-style:none;padding:0;">' + inBoxHtml + '</ul>',
+        '    </div>',
+        '  </div>',
+        '',
+        '  <!-- Right: Info, Price, Actions, Specs -->',
+        '  <div>',
+        '    <div class="flex items-center gap-2 mb-2">',
+        '      <span class="mono-tag">' + product.category + '</span>',
+        '      <span class="mono-tag coral">' + product.skillLevel + '</span>',
+        '    </div>',
+        '    <h1 class="text-3xl font-bold mt-2" style="font-size:2.2rem;line-height:1.2;">' + product.name + '</h1>',
+        '    <p class="text-ink-soft text-lg mt-4 leading-relaxed">' + product.description + '</p>',
+        '',
+        '    <!-- Price and Request Box -->',
+        '    <div class="blueprint-panel mt-6" style="background:var(--paper-alt);padding:1.75rem;">',
+        '      <div class="flex items-baseline justify-between mb-4">',
+        '        <div>',
+        '          <span class="text-3xl font-bold font-mono text-ink" style="font-size:2rem;">' + product.price + '</span>',
+        '          <span class="text-xs text-ink-muted block mt-1">' + product.priceNote + '</span>',
+        '        </div>',
+        '        <span class="mono-tag font-bold">' + product.availability + '</span>',
+        '      </div>',
+        '      <div class="flex items-center gap-3 mt-4">',
+        '        <div class="qty-stepper" style="height:44px;padding:0 4px;">',
+        '          <button type="button" class="qty-btn" id="prod-detail-dec" style="font-size:1.1rem;padding:0 10px;">−</button>',
+        '          <input type="number" id="prod-detail-qty" data-product-qty="' + product.id + '" value="1" min="1" max="99" style="width:40px;text-align:center;border:none;background:transparent;font-family:var(--font-mono);font-weight:bold;outline:none;" readonly>',
+        '          <button type="button" class="qty-btn" id="prod-detail-inc" style="font-size:1.1rem;padding:0 10px;">+</button>',
+        '        </div>',
+        '        <button type="button" class="btn btn-primary" style="flex:1;height:44px;" data-add-to-cart="' + product.id + '">',
+        '          + Add to Request List',
+        '        </button>',
+        '      </div>',
+        '      <p class="text-xs text-ink-muted mt-3">',
+        '        ⚡ Zero online checkout friction. Adds directly to your client-side enquiry cart for fast WhatsApp dispatch.',
+        '      </p>',
+        '    </div>',
+        '',
+        '    <!-- Technical Specifications Table -->',
+        '    <div class="blueprint-panel mt-6" style="padding:1.5rem;">',
+        '      <span class="mono-tag violet">TECHNICAL SPECIFICATIONS</span>',
+        '      <table class="spec-table">' + specsHtml + '</table>',
+        '    </div>',
+        '',
+        '    <!-- Possible Projects -->',
+        '    <div class="blueprint-panel mt-6" style="padding:1.5rem;">',
+        '      <span class="mono-tag">PROJECTS YOU CAN BUILD WITH THIS KIT</span>',
+        '      <div class="flex flex-wrap mt-3">' + projectsHtml + '</div>',
+        '    </div>',
+        '  </div>',
+        '</div>'
+      ].join('\n');
+
+      // Bind thumb clicks
+      var mainImg = document.getElementById('detail-main-img');
+      document.querySelectorAll('.gallery-thumb-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.gallery-thumb-btn').forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          if (mainImg) mainImg.src = btn.getAttribute('data-thumb');
+        });
+      });
+
+      // Bind local qty buttons
+      var qtyInput = document.getElementById('prod-detail-qty');
+      var decBtn = document.getElementById('prod-detail-dec');
+      var incBtn = document.getElementById('prod-detail-inc');
+      if (qtyInput && decBtn && incBtn) {
+        decBtn.addEventListener('click', function() {
+          var val = parseInt(qtyInput.value, 10) || 1;
+          if (val > 1) qtyInput.value = val - 1;
+        });
+        incBtn.addEventListener('click', function() {
+          var val = parseInt(qtyInput.value, 10) || 1;
+          qtyInput.value = val + 1;
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

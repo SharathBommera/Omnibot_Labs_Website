@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Build Story · OmniBot Labs</title>
+  <meta name="description" content="Detailed engineering story of student-built hardware: Problem, Idea, Build, Technology, Testing, Results, and Learnings.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect x='24' y='24' width='112' height='30' rx='10' fill='%236946F1'/%3E%3Crect x='24' y='65' width='82' height='30' rx='10' fill='%23E56661'/%3E%3Crect x='24' y='106' width='30' height='30' rx='10' fill='%23D9EF24'/%3E%3Ccircle cx='121' cy='121' r='15' fill='%2371DCCC'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header / Navbar -->
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a class="logo" aria-label="OmniBot Labs Home" href="index.html">
+        <img class="logo-img logo-light" src="assets/logo-light.jpeg" alt="OmniBot Labs" height="34">
+        <img class="logo-img logo-dark" src="assets/logo-dark.png" alt="OmniBot Labs" height="34">
+        <span class="logo-text"><span class="text-lime">labs</span></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="ladder.html">The Ladder</a>
+        <a href="programs.html">Programs</a>
+        <a href="schools.html">Schools &amp; Labs</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="shop.html">Shop &amp; Kits</a>
+        <a href="impact.html">Social Impact</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="book-demo.html">Book Demo</a>
+
+        <button type="button" class="nav-action-btn" data-open-search aria-label="Search site (Cmd+K)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+
+        <button type="button" class="nav-action-btn" data-open-cart aria-label="View request cart">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count-badge" style="display:none;">0</span>
+        </button>
+
+        <button type="button" aria-label="Toggle dark mode" class="theme-toggle nav-action-btn">🌙</button>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:0.5rem;" class="mobile-nav-actions">
+        <button class="menu-btn" aria-expanded="false" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu">
+    <a href="ladder.html">The Builder's Ladder</a>
+    <a href="programs.html">Programs &amp; Bootcamps</a>
+    <a href="schools.html">Schools &amp; Institutional Labs</a>
+    <a href="projects.html">Project Showcase</a>
+    <a href="shop.html">Shop &amp; Hardware Kits</a>
+    <a href="impact.html">Social Impact &amp; NGO</a>
+    <a href="trainers.html">Trainers &amp; Builders</a>
+    <a href="about.html">About OmniBot Labs</a>
+    <a href="contact.html">Contact Us</a>
+    <a class="nav-cta mt-4" href="book-demo.html">Book a Demo Class</a>
+  </div>
+
+  <main>
+    <div class="container page-top">
+      <a class="back-link" href="projects.html">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>
+        </svg>
+        Back to Project Showcase
+      </a>
+    </div>
+
+    <section class="py-10" style="padding-bottom:5rem;">
+      <div class="container" id="project-detail-host">
+        <!-- Injected dynamically via JS -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo">
+          <img class="logo-img logo-footer" src="assets/logo-dark.png" alt="OmniBot Labs" height="34">
+          <span class="logo-text text-white"><span class="text-lime">labs</span></span>
+        </div>
+        <p class="mt-3 text-sm" style="color:var(--ob-text-soft);max-width:20rem;">
+          Learn it. Build it. Test it. Show it. Use it to create impact.
+        </p>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <ul>
+          <li><a href="projects.html">All Projects</a></li>
+          <li><a href="ladder.html">Builder's Ladder</a></li>
+          <li><a href="shop.html">Hardware Kits</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-xs">
+        © 2026 OmniBot Labs. Solderless, authentic educational hardware.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function() {
+      var host = document.getElementById('project-detail-host');
+      if (!host || !window.OmnibotData || !window.OmnibotData.projects) return;
+
+      var params = new URLSearchParams(window.location.search);
+      var id = params.get('id') || 'solar-river-probe';
+
+      var pj = window.OmnibotData.projects.find(function(p) { return p.id === id; });
+      if (!pj) pj = window.OmnibotData.projects[0];
+
+      document.title = pj.title + ' · Project Story · OmniBot Labs';
+
+      host.innerHTML = [
+        '<div class="reveal">',
+        '  <div class="flex items-center gap-2 mb-3">',
+        '    <span class="mono-tag">' + pj.category + '</span>',
+        '    <span class="mono-tag amber">' + pj.grade + '</span>',
+        '    <span class="mono-tag coral">' + pj.badge + '</span>',
+        '  </div>',
+        '  <h1 class="text-3xl font-bold" style="font-size:2.3rem;">' + pj.title + '</h1>',
+        '  <p class="text-xs font-mono text-ink-muted mt-2">BUILDERS: ' + pj.author + ' · ' + pj.location + '</p>',
+        '  <p class="text-ink-soft text-lg mt-3 max-w-3xl leading-relaxed">' + pj.shortDesc + '</p>',
+        '</div>',
+        '',
+        '<div class="mt-8">',
+        '  <img src="' + pj.image + '" alt="' + pj.title + '" style="width:100%;max-height:480px;object-fit:cover;border-radius:var(--r-2xl);border:1px solid var(--card-border);">',
+        '</div>',
+        '',
+        '<div class="story-step-grid mt-10">',
+        '  <div class="story-step-card">',
+        '    <span class="step-label">01 // THE PROBLEM STATEMENT</span>',
+        '    <p class="text-sm text-ink-soft mt-2 leading-relaxed">' + pj.problem + '</p>',
+        '  </div>',
+        '  <div class="story-step-card">',
+        '    <span class="step-label">02 // THE PROPOSED IDEA</span>',
+        '    <p class="text-sm text-ink-soft mt-2 leading-relaxed">' + pj.idea + '</p>',
+        '  </div>',
+        '  <div class="story-step-card">',
+        '    <span class="step-label">03 // PHYSICAL BUILD &amp; MECHANICS</span>',
+        '    <p class="text-sm text-ink-soft mt-2 leading-relaxed">' + pj.build + '</p>',
+        '  </div>',
+        '  <div class="story-step-card">',
+        '    <span class="step-label">04 // HARDWARE &amp; CODE STACK</span>',
+        '    <p class="text-sm text-ink-soft mt-2 leading-relaxed">' + pj.technology + '</p>',
+        '  </div>',
+        '  <div class="story-step-card">',
+        '    <span class="step-label">05 // FIELD TESTING</span>',
+        '    <p class="text-sm text-ink-soft mt-2 leading-relaxed">' + pj.test + '</p>',
+        '  </div>',
+        '  <div class="story-step-card">',
+        '    <span class="step-label">06 // QUANTIFIABLE RESULTS</span>',
+        '    <p class="text-sm text-ink-soft mt-2 leading-relaxed">' + pj.result + '</p>',
+        '  </div>',
+        '</div>',
+        '',
+        '<div class="blueprint-panel mt-8" style="background:var(--paper-alt);padding:2rem;">',
+        '  <span class="mono-tag" style="background:rgba(217,239,36,0.12);color:var(--ob-lime);">CRITICAL HARDWARE LEARNING</span>',
+        '  <h3 class="text-xl font-bold mt-2">What Engineering Lesson Did the Builders Walk Away With?</h3>',
+        '  <p class="text-sm text-ink-soft mt-2 leading-relaxed max-w-3xl">' + pj.learning + '</p>',
+        '  <div class="mt-6 flex flex-wrap gap-4">',
+        '    <a href="book-demo.html" class="btn btn-primary">Start Building Projects Like This →</a>',
+        '    <a href="shop.html" class="btn btn-secondary">Explore Hardware Kits Used</a>',
+        '  </div>',
+        '</div>'
+      ].join('\n');
+    })();
+  </script>
+</body>
+</html>
