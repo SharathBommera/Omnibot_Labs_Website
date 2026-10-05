@@ -14,9 +14,9 @@
   <header class="site-header">
     <nav class="nav-inner">
       <a class="logo" aria-label="OmniBot Labs Home" href="index.html">
-        <img class="logo-img logo-light" src="assets/logo-light.jpeg" alt="OmniBot Labs" height="34">
-        <img class="logo-img logo-dark" src="assets/logo-dark.png" alt="OmniBot Labs" height="34">
-        <span class="logo-text"><span class="text-lime">labs</span></span>
+        <img class="logo-img logo-light" src="assets/logo-transparent.png" alt="OmniBot Labs" height="44">
+        <img class="logo-img logo-dark" src="assets/logo-transparent.png" alt="OmniBot Labs" height="40">
+        <span class="logo-text"><span class="text-blue">labs</span></span>
       </a>
 
       <div class="nav-links">
@@ -43,13 +43,24 @@
           <span class="cart-count-badge" style="display:none;">0</span>
         </button>
 
-        <button type="button" aria-label="Toggle dark mode" class="theme-toggle nav-action-btn">🌙</button>
+        
       </div>
 
-      <div style="display:flex;align-items:center;gap:0.5rem;" class="mobile-nav-actions">
+      <div class="mobile-nav-actions">
+        <button type="button" class="nav-action-btn" data-open-search aria-label="Search site">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+        <button type="button" class="nav-action-btn" data-open-cart aria-label="View request cart">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/>
+          </svg>
+          <span class="cart-count-badge" style="display:none;">0</span>
+        </button>
         <button class="menu-btn" aria-expanded="false" aria-label="Open menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/>
           </svg>
         </button>
       </div>
@@ -92,8 +103,8 @@
     <div class="container footer-grid">
       <div>
         <div class="logo">
-          <img class="logo-img logo-footer" src="assets/logo-dark.png" alt="OmniBot Labs" height="34">
-          <span class="logo-text text-white"><span class="text-lime">labs</span></span>
+          <img class="logo-img logo-footer" src="assets/logo-transparent.png" alt="OmniBot Labs" height="40">
+          <span class="logo-text text-white"><span class="text-blue">labs</span></span>
         </div>
         <p class="mt-3 text-sm" style="color:var(--ob-text-soft);max-width:20rem;">
           Learn it. Build it. Test it. Show it. Use it to create impact.

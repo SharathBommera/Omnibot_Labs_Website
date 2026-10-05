@@ -9,30 +9,13 @@
   var isReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var canHover = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
 
-  /* ---- 1. Dark Mode Management ---- */
+  /* ---- 1. Bright Theme Management (Strict Bright Light Mode) ---- */
   function initTheme(){
-    var saved = localStorage.getItem('omnibot-theme');
-    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if(saved === 'dark' || (!saved && prefersDark)){
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    updateThemeButtons();
-  }
-
-  function updateThemeButtons(){
-    var isDark = document.documentElement.classList.contains('dark');
-    document.querySelectorAll('.theme-toggle').forEach(function(btn){
-      btn.textContent = isDark ? '☀️' : '🌙';
-      btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-    });
-  }
-
-  function toggleTheme(){
-    var isDark = document.documentElement.classList.toggle('dark');
-    localStorage.setItem('omnibot-theme', isDark ? 'dark' : 'light');
-    updateThemeButtons();
+    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.add('light');
+    try {
+      localStorage.setItem('omnibot-theme', 'light');
+    } catch(e) {}
   }
 
   /* ---- 2. Mobile Menu ---- */
@@ -227,36 +210,10 @@
   }
 
   /* ---- 8. Sticky Announcement Banner ---- */
+  /* ---- 8. Sticky Announcement Banner (Disabled) ---- */
   function initBanner(){
-    if(sessionStorage.getItem('omnibot-banner-dismissed') === '1') return;
-    if(document.getElementById('promo-banner')) return;
-
-    var b = document.createElement('div');
-    b.id = 'promo-banner';
-    b.innerHTML = '<span>Have questions before enrolling? We\'re just a call away. <a href="mailto:hello@omnibotlabs.com">Get in touch</a></span><button type="button" class="banner-close" aria-label="Dismiss announcement"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>';
-    document.body.insertBefore(b, document.body.firstChild);
-
-    function updateOffsets(){
-      var h = b.isConnected ? b.offsetHeight : 0;
-      var header = document.querySelector('.site-header');
-      if(header) header.style.top = h + 'px';
-    }
-
-    requestAnimationFrame(function(){
-      requestAnimationFrame(function(){
-        b.classList.add('is-shown');
-        updateOffsets();
-      });
-    });
-
-    b.querySelector('.banner-close').addEventListener('click', function(){
-      b.classList.remove('is-shown');
-      sessionStorage.setItem('omnibot-banner-dismissed', '1');
-      var header = document.querySelector('.site-header');
-      if(header) header.style.top = '0px';
-      setTimeout(function(){ b.remove(); }, 350);
-    });
-    window.addEventListener('resize', updateOffsets, {passive: true});
+    // Disabled to prevent unwanted layout shifts and keep header clean
+    return;
   }
 
   /* ---- 9. Multi-Step Boot Loader ---- */

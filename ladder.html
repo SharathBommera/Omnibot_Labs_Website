@@ -20,9 +20,9 @@
   <header class="site-header">
     <nav class="nav-inner">
       <a class="logo" aria-label="OmniBot Labs Home" href="index.html">
-        <img class="logo-img logo-light" src="assets/logo-light.jpeg" alt="OmniBot Labs" height="34">
-        <img class="logo-img logo-dark" src="assets/logo-dark.png" alt="OmniBot Labs" height="34">
-        <span class="logo-text"><span class="text-lime">labs</span></span>
+        <img class="logo-img logo-light" src="assets/logo-transparent.png" alt="OmniBot Labs" height="44">
+        <img class="logo-img logo-dark" src="assets/logo-transparent.png" alt="OmniBot Labs" height="40">
+        <span class="logo-text"><span class="text-blue">labs</span></span>
       </a>
 
       <div class="nav-links">
@@ -49,13 +49,24 @@
           <span class="cart-count-badge" style="display:none;">0</span>
         </button>
 
-        <button type="button" aria-label="Toggle dark mode" class="theme-toggle nav-action-btn">🌙</button>
+        
       </div>
 
-      <div style="display:flex;align-items:center;gap:0.5rem;" class="mobile-nav-actions">
+      <div class="mobile-nav-actions">
+        <button type="button" class="nav-action-btn" data-open-search aria-label="Search site">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+        <button type="button" class="nav-action-btn" data-open-cart aria-label="View request cart">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/>
+          </svg>
+          <span class="cart-count-badge" style="display:none;">0</span>
+        </button>
         <button class="menu-btn" aria-expanded="false" aria-label="Open menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/>
           </svg>
         </button>
       </div>
@@ -80,10 +91,10 @@
   <main>
     <div class="container page-top">
       <a class="back-link" href="index.html">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6"/>
         </svg>
-        Home
+        <span>Back to Home</span>
       </a>
     </div>
 
@@ -94,57 +105,78 @@
           <h1 class="mt-3">Climb the Builder's Ladder</h1>
           <p class="mt-4 max-w-2xl text-lg text-ink-soft">
             Every grade adds at most one new major tool, so skills stack without cliffs. Tap any rung to see the year.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <span class="badge bg-amber text-ink">Foundations · G3–5</span>
-            <span class="badge bg-violet text-white">Bridge · G6–7</span>
-            <span class="badge bg-coral text-white">Engineering · G8–9</span>
-            <span class="badge bg-mint text-ink">Frontier · G10–12</span>
-          </div>
+          <p class="mt-2 text-sm text-ink-muted">Tap any grade rung to inspect curriculum milestones, hardware toolchains, and annual capstones.</p>
         </div>
 
-        <!-- Grade selector tabs (bar chart style) -->
-        <div role="tablist" aria-label="Select a grade" class="ladder-tabs reveal">
-          <button role="tab" data-grade="3" aria-selected="true" aria-label="Grade 3: Think Like a Builder" class="ladder-tab bg-amber text-ink" style="height:68px;">
-            <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
-            <span>3</span>
-          </button>
-          <button role="tab" data-grade="4" aria-selected="false" aria-label="Grade 4: Make It Move" class="ladder-tab bg-amber text-ink" style="height:82px;">
-            <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
-            <span>4</span>
-          </button>
-          <button role="tab" data-grade="5" aria-selected="false" aria-label="Grade 5: Sense the World" class="ladder-tab bg-amber text-ink" style="height:96px;">
-            <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
-            <span>5</span>
-          </button>
-          <button role="tab" data-grade="6" aria-selected="false" aria-label="Grade 6: Speak Robot" class="ladder-tab bg-coral text-white" style="height:110px;">
-            <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
-            <span>6</span>
-          </button>
-          <button role="tab" data-grade="7" aria-selected="false" aria-label="Grade 7: The Power of Python" class="ladder-tab bg-coral text-white" style="height:124px;">
-            <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
-            <span>7</span>
-          </button>
-          <button role="tab" data-grade="8" aria-selected="false" aria-label="Grade 8: Systems &amp; Signals" class="ladder-tab bg-coral text-white" style="height:138px;">
-            <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
-            <span>8</span>
-          </button>
-          <button role="tab" data-grade="9" aria-selected="false" aria-label="Grade 9: Intelligent Machines" class="ladder-tab bg-blue text-white" style="height:152px;">
-            <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
-            <span>9</span>
-          </button>
-          <button role="tab" data-grade="10" aria-selected="false" aria-label="Grade 10: Engineer Real Things" class="ladder-tab bg-blue text-white" style="height:166px;">
-            <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
-            <span>10</span>
-          </button>
-          <button role="tab" data-grade="11" aria-selected="false" aria-label="Grade 11: Specialize &amp; Go Deep" class="ladder-tab bg-violet text-white" style="height:180px;">
-            <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
-            <span>11</span>
-          </button>
-          <button role="tab" data-grade="12" aria-selected="false" aria-label="Grade 12: Research &amp; Responsibility" class="ladder-tab bg-violet text-white" style="height:194px;">
-            <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
-            <span>12</span>
-          </button>
+        <!-- Aligned Stage Markers and 10 Ascending Grade Rungs -->
+        <div class="ladder-scroll-track reveal">
+          <!-- Aligned Stage Bands (10-column grid matching the 10 grade rungs) -->
+          <div class="ladder-bands-bar" aria-label="Curriculum Stages">
+            <div class="ladder-band-marker band-foundations">
+              <span class="band-dot"></span>
+              <span class="band-name">Foundations</span>
+              <span class="band-grades">G3–5</span>
+            </div>
+            <div class="ladder-band-marker band-bridge">
+              <span class="band-dot"></span>
+              <span class="band-name">Bridge</span>
+              <span class="band-grades">G6–8</span>
+            </div>
+            <div class="ladder-band-marker band-engineering">
+              <span class="band-dot"></span>
+              <span class="band-name">Engineering</span>
+              <span class="band-grades">G9–10</span>
+            </div>
+            <div class="ladder-band-marker band-frontier">
+              <span class="band-dot"></span>
+              <span class="band-name">Frontier</span>
+              <span class="band-grades">G11–12</span>
+            </div>
+          </div>
+
+          <!-- Grade selector tabs (10 ascending rungs with high contrast) -->
+          <div role="tablist" aria-label="Select a grade rung" class="ladder-tabs">
+            <button role="tab" data-grade="3" aria-selected="true" aria-label="Grade 3: Think Like a Builder" class="ladder-tab bg-amber" style="height:76px;">
+              <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
+              <span class="rung-num">3</span>
+            </button>
+            <button role="tab" data-grade="4" aria-selected="false" aria-label="Grade 4: Make It Move" class="ladder-tab bg-amber" style="height:90px;">
+              <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
+              <span class="rung-num">4</span>
+            </button>
+            <button role="tab" data-grade="5" aria-selected="false" aria-label="Grade 5: Sense the World" class="ladder-tab bg-amber" style="height:104px;">
+              <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
+              <span class="rung-num">5</span>
+            </button>
+            <button role="tab" data-grade="6" aria-selected="false" aria-label="Grade 6: Speak Robot" class="ladder-tab bg-coral" style="height:118px;">
+              <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
+              <span class="rung-num">6</span>
+            </button>
+            <button role="tab" data-grade="7" aria-selected="false" aria-label="Grade 7: The Power of Python" class="ladder-tab bg-coral" style="height:132px;">
+              <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
+              <span class="rung-num">7</span>
+            </button>
+            <button role="tab" data-grade="8" aria-selected="false" aria-label="Grade 8: Systems & Signals" class="ladder-tab bg-coral" style="height:146px;">
+              <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
+              <span class="rung-num">8</span>
+            </button>
+            <button role="tab" data-grade="9" aria-selected="false" aria-label="Grade 9: Intelligent Machines" class="ladder-tab bg-blue" style="height:162px;">
+              <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
+              <span class="rung-num">9</span>
+            </button>
+            <button role="tab" data-grade="10" aria-selected="false" aria-label="Grade 10: Engineer Real Things" class="ladder-tab bg-blue" style="height:178px;">
+              <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
+              <span class="rung-num">10</span>
+            </button>
+            <button role="tab" data-grade="11" aria-selected="false" aria-label="Grade 11: Specialize & Go Deep" class="ladder-tab bg-violet" style="height:194px;">
+              <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
+              <span class="rung-num">11</span>
+            </button>
+            <button role="tab" data-grade="12" aria-selected="false" aria-label="Grade 12: Research & Responsibility" class="ladder-tab bg-violet" style="height:210px;">
+              <span aria-hidden="true" class="dots"><span class="dot"></span><span class="dot"></span></span>
+              <span class="rung-num">12</span>
+            </button>
+          </div>
         </div>
 
         <!-- Grade 3 Panel -->
@@ -658,8 +690,8 @@
     <div class="container footer-grid">
       <div>
         <div class="logo">
-          <img class="logo-img logo-footer" src="assets/logo-dark.png" alt="OmniBot Labs" height="34">
-          <span class="logo-text text-white"><span class="text-lime">labs</span></span>
+          <img class="logo-img logo-footer" src="assets/logo-transparent.png" alt="OmniBot Labs" height="40">
+          <span class="logo-text text-white"><span class="text-blue">labs</span></span>
         </div>
         <p class="mt-3 text-sm text-paper" style="opacity:0.65;max-width:20rem;">
           Learn it. Build it. Test it. Show it. Use it to create impact. A ten-year robotics, coding &amp; AI curriculum for Grades 3–12.
